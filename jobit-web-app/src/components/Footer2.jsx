@@ -5,11 +5,11 @@ export default function Footer2() {
     <>
       <footer class="bg-white">
   <div
-    class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8"
+    class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8 border-t-2"
   >
-    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 ">
       <div>
-        <div class="text-teal-600">
+        <div class="text-blue-500">
           <svg
             class="h-8"
             viewBox="0 0 118 24"
@@ -304,8 +304,8 @@ export default function Footer2() {
       </div>
     </div>
 
-    <p class="text-xs text-gray-500">
-      &copy; 2022. Company Name. All rights reserved.
+    <p class="text-xs text-gray-500 pt-2 border-t-2">
+      &copy; 2023. JobIT - Portal Job App. All rights reserved.
     </p>
   </div>
 </footer>
