@@ -1,11 +1,12 @@
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default function Navbar() {
+export default function NavbarClients() {
   return (
   <>
     {/* ================= NAVBAR ====================== */}
-    <nav className='bg-slate-50 sticky top-0'>
+    <nav className="z-10 bg-slate-50 sticky top-0">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -79,37 +80,38 @@ export default function Navbar() {
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                <a
-                  href="#"
+                <Link to={"/"}
                   className="hover:text-blue-700 px-3 py-2 text-md font-medium"
                   aria-current="page"
                 >
                   Home
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link to={"/dashboard"}
                   className="hover:text-blue-700 px-3 py-2 text-md font-medium"
                 >
-                  About
-                </a>
-                <a
-                  href="#"
+                  Dashboard
+                </Link>
+                <Link to={"/explore-job"}
                   className="hover:text-blue-700 px-3 py-2 text-md font-medium"
                 >
-                  Contact
-                </a>
+                  Explore Jobs
+                </Link>
               </div>
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center gap-2 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             {/* Button Register */}
-            <button className="text-white bg-gray-400 hover:bg-blue-700 rounded-md px-6 py-2 text-sm font-medium">
-              Register
-            </button>
+            <Link to={"/signup"}>
+              <button className="text-white bg-gray-400 hover:bg-blue-600 rounded px-6 py-2 text-sm font-medium">
+                Register
+              </button>
+            </Link>
             {/* Button Sign In */}
-            <button className="text-white bg-blue-700 hover:bg-blue-600 rounded-md px-6 py-2 text-sm font-medium">
-              Sign In
-            </button>
+            <Link to={"/signin"}>
+              <button className="text-white bg-blue-600 hover:bg-blue-700 rounded px-6 py-2 text-sm font-medium">
+                Sign In
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -117,31 +119,31 @@ export default function Navbar() {
       <div className="sm:hidden" id="mobile-menu">
         <div className="space-y-1 px-2 pb-3 pt-2">
           {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-          <a
-            href="#"
+          <Link
+            to={"/"}
             className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
             aria-current="page"
           >
             Dashboard
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to={"/"}
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
             Team
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to={"/"}
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
             Projects
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to={"/"}
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
             Calendar
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

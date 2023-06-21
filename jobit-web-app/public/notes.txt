@@ -1,0 +1,11 @@
+{/* <BrowserRouter>
+        <Navbar/>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/jobdetails' element={<JobDetails/>}/>
+          <Route path='/signup' element={<FormSignUp/>}/>
+          <Route path='/signin' element={<FormSignIn/>}/>
+          <Route path='*' element={<ErrorPage/>}/>
+        </Routes>
+      </BrowserRouter>
+      <Footer/> */}

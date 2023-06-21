@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function FormSignUp() {
+export default function SignIn() {
   return (
     <>
       <div className=" mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-lg text-center">
-          <h1 className="text-2xl font-bold sm:text-3xl">Register Account</h1>
+          <h1 className="text-2xl font-bold sm:text-3xl">Sign In Account</h1>
           <p className="mt-4 text-gray-500">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Et libero nulla
             eaque error neque ipsa culpa autem, at itaque nostrum!
@@ -13,67 +13,6 @@ export default function FormSignUp() {
         </div>
 
         <form action="" className="mx-auto mb-0 mt-8 max-w-md space-y-4">
-          <div>
-            <label htmlFor="name">
-              Fullname *
-            </label>
-            <div className="relative">
-              <input
-                type="text"
-                className="w-full rounded-lg border-2 border-gray-200 p-4 pe-12 text-sm shadow-sm bg-transparent"
-                placeholder="Enter Your Fullname"
-                required
-              />
-              <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-gray-400"
-                  fill="none"
-                  viewBox="0 0 25 20"
-                  stroke="currentColor"
-                >
-                    <path
-                      fill="currentColor"
-                      fillRule="evenodd"
-                      d="M16 9a4 4 0 11-8 0 4 4 0 018 0zm-2 0a2 2 0 11-4 0 2 2 0 014 0z"
-                      clipRule="evenodd"
-                    />
-                    <path
-                      fill="currentColor"
-                      fillRule="evenodd"
-                      d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM3 12c0 2.09.713 4.014 1.908 5.542A8.986 8.986 0 0112.065 14a8.984 8.984 0 017.092 3.458A9 9 0 103 12zm9 9a8.963 8.963 0 01-5.672-2.012A6.992 6.992 0 0112.065 16a6.991 6.991 0 015.689 2.92A8.964 8.964 0 0112 21z"
-                      clipRule="evenodd"
-                    />
-                </svg>
-              </span>
-            </div>
-          </div>
-
-          <div>
-            <label htmlFor="photo">
-              Photo *
-            </label>
-            <div className="relative">
-              <input
-                type="text"
-                className="w-full rounded-lg border-2 border-gray-200 p-4 pe-12 text-sm shadow-sm bg-transparent"
-                placeholder="Upload Your Photo here"
-                required
-              />
-              <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 text-gray-400"
-                    fill="#9ca3af"
-                    viewBox="0 0 512 512"
-                    stroke="currentColor"
-                  >
-                      <path d="M0 96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zm323.8 106.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6-26.5-33.1c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4S78.8 416 88 416h336c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192c26.5 0 48-21.5 48-48s-21.5-48-48-48-48 21.5-48 48 21.5 48 48 48z" />
-                  </svg>
-              </span>
-            </div>
-          </div>
-
           <div>
             <label htmlFor="email">
               Email Address *
@@ -142,18 +81,31 @@ export default function FormSignUp() {
 
           <div className="flex items-center justify-between">
             
+            <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
+              <input
+                className="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-black checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-black checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                type="checkbox"
+                value=""
+                id="checkboxDefault" required />
+              <label
+                className="text-sm inline-block pl-[0.15rem] hover:cursor-pointer"
+                for="checkboxDefault">
+                Remember Me
+              </label>
+            </div>
+            <a href="" className="text-sm text-gray-500">Forgot Password</a>
           </div>
             
             <button
               type="submit"
               className="w-full inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
             >
-              Submit & Register
+              Sign in
             </button>
             <p className="text-sm text-gray-500">
-              Already Have an Account ?
+              Don't Have an Account ?
               <a className="underline" href="">
-                Sign in here
+                Sign up here
               </a>
             </p>
 
