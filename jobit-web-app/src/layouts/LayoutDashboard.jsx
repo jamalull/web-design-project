@@ -1,7 +1,7 @@
 import React from 'react'
 import NavigationSideDashboard from '../components/admin/NavigationSideDashboard'
 import NavbarDashboard from '../components/admin/NavbarDashboard'
-import AddNewJob from '../components/admin/AddNewJob'
+import { Outlet } from "react-router"
 
 export default function LayoutDashboard() {
   return (
@@ -12,7 +12,7 @@ export default function LayoutDashboard() {
         </div>
         <div className="grow">
           <NavbarDashboard/>
-          <AddNewJob/>
+          <Outlet/>
         </div>
       </div>
     </>
