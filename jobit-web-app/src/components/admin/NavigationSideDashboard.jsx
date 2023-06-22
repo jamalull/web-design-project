@@ -1,5 +1,6 @@
 import React from 'react'
 import NavbarDashboard from './NavbarDashboard'
+import { Link } from "react-router-dom"
 
 export default function NavigationSideDashboard() {
   return (
@@ -17,12 +18,12 @@ export default function NavigationSideDashboard() {
           </span>
           <ul className="mt-6 space-y-1">
             <li>
-              <a
-                href=""
+              <Link
+                to={"/dashboard"}
                 className="block rounded-lg bg-blue-50 px-4 py-2 text-sm font-medium text-gray-700"
               >
                 Dashboard
-              </a>
+              </Link>
             </li>
             <li>
               <details className="group [&_summary::-webkit-details-marker]:hidden">
@@ -45,20 +46,20 @@ export default function NavigationSideDashboard() {
                 </summary>
                 <ul className="mt-2 space-y-1 px-4">
                   <li>
-                    <a
-                      href=""
+                    <Link
+                      to={"/dashboard/alljoblist"}
                       className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-blue-100 hover:text-gray-700"
                     >
                       Show All Job Lists
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href=""
+                    <Link
+                      to={"/dashboard/postjob"}
                       className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-blue-100 hover:text-gray-700"
                     >
                       Add New Jobs
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </details>
@@ -100,20 +101,20 @@ export default function NavigationSideDashboard() {
                 </summary>
                 <ul className="mt-2 space-y-1 px-4">
                   <li>
-                    <a
-                      href=""
+                    <Link
+                      to={"/dashboard/detailsprofile"}
                       className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-blue-100 hover:text-gray-700"
                     >
                       Details Profile
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href=""
+                    <Link
+                      to={"/dashboard/changepassword"}
                       className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-blue-100 hover:text-gray-700"
                     >
                       Change Password Account
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <form action="/logout">
