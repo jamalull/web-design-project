@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import JobList from "./JobList";
+import { GlobalContext } from "../../context/GlobalContext";
 
 export default function EploreJobs() {
+  const { state, handleFunction } = useContext(GlobalContext);
+  const { inputSearchData, setFetchStatus } = state;
+  const { handleInputSearch, handleSubmitSearch } = handleFunction;
+
   return (
     <>
       <section className="bg-slate-100 py-16">
@@ -10,14 +15,41 @@ export default function EploreJobs() {
             Explore and Find Your Dream Job, Now
           </h2>
           <p className="mt-4 mb-5 w-1/2 mx-auto text-gray-500">
-            Explore our web job portal, and you will find a wide range of companies and job types to suit your needs. We have worked with various companies to find between the best candidates and the best companies to reach a mutual agreement. Exploration immediately and discover your future.
+            Explore our web job portal, and you will find a wide range of
+            companies and job types to suit your needs. We have worked with
+            various companies to find between the best candidates and the best
+            companies to reach a mutual agreement. Exploration immediately and
+            discover your future.
           </p>
         </div>
 
-        <div className="flex w-52 mx-auto">
+        <div className="flex max-w-md mx-auto max-[630px]:flex-col">
+          <div>
+            <div className="relative">
+              <input
+                onChange={handleInputSearch}
+                value={inputSearchData.searchjob}
+                name="searchjob"
+                type="text"
+                className="w-full rounded-lg border-2 border-blue-200 p-4 pe-12 text-sm shadow-sm bg-transparent"
+                placeholder="Search job name here"
+                required
+              />
+              <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  height="1em"
+                  width="1em"
+                >
+                  <path d="M10 18a7.952 7.952 0 004.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0018 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z" />
+                </svg>
+              </span>
+            </div>
+          </div>
           <button
-            type="submit"
-            className="group mx-auto mt-4 flex w-full items-center justify-center gap-2 rounded-md bg-blue-600 px-5 py-3 text-white transition focus:outline-none focus:ring focus:ring-yellow-400 sm:mt-0 sm:w-auto"
+            onClick={handleSubmitSearch}
+            className="group mx-auto mt-4 flex w-full items-center justify-center gap-2 rounded-md bg-blue-600 px-5 py-3 text-white transition focus:outline-none focus:ring focus:ring-blue-400 sm:mt-0 sm:w-auto"
           >
             <span className="text-sm font-medium"> Search Job </span>
             <svg
@@ -39,36 +71,32 @@ export default function EploreJobs() {
             </svg>
           </button>
           <button
+            onClick={() => setFetchStatus(true)}
             type="submit"
             className="group mx-auto mt-4 flex w-full items-center justify-center gap-2 rounded-md bg-slate-400 px-5 py-3 text-white transition hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-400 sm:mt-0 sm:w-auto"
           >
             <svg
-              viewBox="0 0 512 512"
+              viewBox="0 0 19 19"
               fill="currentColor"
-              height="1em"
-              width="1em"
+              height="2em"
+              width="2em"
             >
-              <path
+              <g
                 fill="none"
+                fillRule="evenodd"
                 stroke="currentColor"
+                strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={32}
-                d="M128 80V64a48.14 48.14 0 0148-48h224a48.14 48.14 0 0148 48v368l-80-64"
-              />
-              <path
-                fill="none"
-                stroke="currentColor"
-                strokeLinejoin="round"
-                strokeWidth={32}
-                d="M320 96H112a48.14 48.14 0 00-48 48v352l152-128 152 128V144a48.14 48.14 0 00-48-48z"
-              />
+              >
+                <path d="M3.578 6.487A8 8 0 112.5 10.5M7.5 6.5h-4v-4" />
+              </g>
             </svg>
           </button>
         </div>
       </section>
 
       <section>
-        <JobList/>
+        <JobList />
       </section>
     </>
   );

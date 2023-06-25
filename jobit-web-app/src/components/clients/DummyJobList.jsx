@@ -18,7 +18,6 @@ export default function DummyJobList() {
           </div>
           <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
             <Link
-              to={"/explore-job"}
               className="flex gap-5 rounded-xl border border-gray-400 p-5 shadow-xl transition hover:border-black-500/10 hover:shadow-blue-500/10"
               href="/services/digital-campaigns"
             >
@@ -33,7 +32,7 @@ export default function DummyJobList() {
                   Software Engineer
                 </h2>
                 <p className="mb-1 text-sm text-gray-500">Tokopedia Inc</p>
-                <div className="flex gap-3">
+                <div className="flex gap-3 max-[500px]:flex-col-reverse">
                   <div>
                     <span className="flex items-center gap-1">
                       <svg
@@ -112,7 +111,6 @@ export default function DummyJobList() {
             </Link>
             
             <Link
-              to={"/explore-job"}
               className="flex gap-5 rounded-xl border border-gray-400 p-5 shadow-xl transition hover:border-black-500/10 hover:shadow-blue-500/10"
               href="/services/digital-campaigns"
             >
@@ -148,7 +146,7 @@ export default function DummyJobList() {
                           <path d="M9 6.5 A2.5 2.5 0 0 1 6.5 9 A2.5 2.5 0 0 1 4 6.5 A2.5 2.5 0 0 1 9 6.5 z" />
                         </g>
                       </svg>
-                      <p className="mt-1 mb-1 text-sm text-gray-500">Jakarta Barat</p>
+                      <p className="mt-1 mb-1 text-sm text-gray-500">Jakarta Pusat</p>
                     </span>
                     <span className="flex items-center gap-1">
                       <svg
@@ -163,7 +161,7 @@ export default function DummyJobList() {
                         />
                         <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z" />
                       </svg>
-                      <p className="mb-1 text-sm text-gray-500">Remote Work</p>
+                      <p className="mb-1 text-sm text-gray-500">Onsite</p>
                     </span>
                     <p className="mt-2 whitespace-nowrap rounded-full px-3.5 py-1 bg-green-100  text-sm text-green-700">
                       Open Hiring
@@ -179,7 +177,7 @@ export default function DummyJobList() {
                       >
                         <path d="M184 48h144c4.4 0 8 3.6 8 8v40H176V56c0-4.4 3.6-8 8-8zm-56 8v40H64c-35.3 0-64 28.7-64 64v96h360.2c32.3-39.1 81.1-64 135.8-64 5.4 0 10.7.2 16 .7V160c0-35.3-28.7-64-64-64h-64V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zm192 296h-96c-17.7 0-32-14.3-32-32v-32H0v128c0 35.3 28.7 64 64 64h296.2c-25.1-30.4-40.2-69.5-40.2-112 0-5.4.2-10.7.7-16h-.7zm320 16c0-79.5-64.5-144-144-144s-144 64.5-144 144 64.5 144 144 144 144-64.5 144-144zm-144-80c8.8 0 16 7.2 16 16v48h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16v-64c0-8.8 7.2-16 16-16z" />
                       </svg>
-                      <p className="mt-1 mb-1 text-sm text-gray-500">Contract</p>
+                      <p className="mt-1 mb-1 text-sm text-gray-500">Fulltime</p>
                     </span>
                     <span className="flex items-center gap-1">
                       <svg
@@ -197,7 +195,7 @@ export default function DummyJobList() {
                         <path d="M9.998 5.083L10 5a2 2 0 10-3.132 1.65 5.982 5.982 0 013.13-1.567z" />
                       </svg>
                       <p className="mb-1 text-sm text-gray-500">
-                        Rp 6.000.000 - Rp 10.000.000
+                        Rp 5.000.000 - Rp 9.000.000
                       </p>
                     </span>
                   </div>
@@ -206,7 +204,6 @@ export default function DummyJobList() {
             </Link>
             
             <Link
-              to={"/explore-job"}
               className="flex gap-5 rounded-xl border border-gray-400 p-5 shadow-xl transition hover:border-black-500/10 hover:shadow-blue-500/10"
               href="/services/digital-campaigns"
             >
@@ -242,7 +239,7 @@ export default function DummyJobList() {
                           <path d="M9 6.5 A2.5 2.5 0 0 1 6.5 9 A2.5 2.5 0 0 1 4 6.5 A2.5 2.5 0 0 1 9 6.5 z" />
                         </g>
                       </svg>
-                      <p className="mt-1 mb-1 text-sm text-gray-500">Jakarta Barat</p>
+                      <p className="mt-1 mb-1 text-sm text-gray-500">Jakarta Selatan</p>
                     </span>
                     <span className="flex items-center gap-1">
                       <svg
@@ -291,7 +288,7 @@ export default function DummyJobList() {
                         <path d="M9.998 5.083L10 5a2 2 0 10-3.132 1.65 5.982 5.982 0 013.13-1.567z" />
                       </svg>
                       <p className="mb-1 text-sm text-gray-500">
-                        Rp 6.000.000 - Rp 10.000.000
+                        Rp 7.000.000 - Rp 11.000.000
                       </p>
                     </span>
                   </div>
@@ -300,7 +297,6 @@ export default function DummyJobList() {
             </Link>
             
             <Link
-              to={"/explore-job"}
               className="flex gap-5 rounded-xl border border-gray-400 p-5 shadow-xl transition hover:border-black-500/10 hover:shadow-blue-500/10"
               href="/services/digital-campaigns"
             >
@@ -336,7 +332,7 @@ export default function DummyJobList() {
                           <path d="M9 6.5 A2.5 2.5 0 0 1 6.5 9 A2.5 2.5 0 0 1 4 6.5 A2.5 2.5 0 0 1 9 6.5 z" />
                         </g>
                       </svg>
-                      <p className="mt-1 mb-1 text-sm text-gray-500">Jakarta Barat</p>
+                      <p className="mt-1 mb-1 text-sm text-gray-500">Jakarta Pusat</p>
                     </span>
                     <span className="flex items-center gap-1">
                       <svg
@@ -351,7 +347,7 @@ export default function DummyJobList() {
                         />
                         <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z" />
                       </svg>
-                      <p className="mb-1 text-sm text-gray-500">Remote Work</p>
+                      <p className="mb-1 text-sm text-gray-500">Hybrid</p>
                     </span>
                     <p className="mt-2 whitespace-nowrap rounded-full px-3.5 py-1 bg-green-100  text-sm text-green-700">
                       Open Hiring
@@ -367,7 +363,7 @@ export default function DummyJobList() {
                       >
                         <path d="M184 48h144c4.4 0 8 3.6 8 8v40H176V56c0-4.4 3.6-8 8-8zm-56 8v40H64c-35.3 0-64 28.7-64 64v96h360.2c32.3-39.1 81.1-64 135.8-64 5.4 0 10.7.2 16 .7V160c0-35.3-28.7-64-64-64h-64V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zm192 296h-96c-17.7 0-32-14.3-32-32v-32H0v128c0 35.3 28.7 64 64 64h296.2c-25.1-30.4-40.2-69.5-40.2-112 0-5.4.2-10.7.7-16h-.7zm320 16c0-79.5-64.5-144-144-144s-144 64.5-144 144 64.5 144 144 144 144-64.5 144-144zm-144-80c8.8 0 16 7.2 16 16v48h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16v-64c0-8.8 7.2-16 16-16z" />
                       </svg>
-                      <p className="mt-1 mb-1 text-sm text-gray-500">Contract</p>
+                      <p className="mt-1 mb-1 text-sm text-gray-500">Fulltime</p>
                     </span>
                     <span className="flex items-center gap-1">
                       <svg
@@ -385,7 +381,7 @@ export default function DummyJobList() {
                         <path d="M9.998 5.083L10 5a2 2 0 10-3.132 1.65 5.982 5.982 0 013.13-1.567z" />
                       </svg>
                       <p className="mb-1 text-sm text-gray-500">
-                        Rp 6.000.000 - Rp 10.000.000
+                        Rp 8.000.000 - Rp 12.000.000
                       </p>
                     </span>
                   </div>

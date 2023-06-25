@@ -1,8 +1,13 @@
 
-import React from 'react'
-import { Link } from 'react-router-dom'
+import Cookies from "js-cookie"
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function NavbarClients() {
+  let navigate = useNavigate();
+  const [showMenu, setShowMenu] = useState(false);
+  const handleNavbarClients = () => {setShowMenu(!showMenu)};
+  
   return (
   <>
     {/* ================= NAVBAR ====================== */}
@@ -12,6 +17,7 @@ export default function NavbarClients() {
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
             <button
+              onClick={handleNavbarClients}
               type="button"
               className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
@@ -60,16 +66,6 @@ export default function NavbarClients() {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-              {/* <img
-                className="block h-8 w-auto lg:hidden"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                alt="Your Company"
-              />
-              <img
-                className="hidden h-8 w-auto lg:block"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                alt="Your Company"
-              /> */}
               <svg width="124" height="34" viewBox="0 0 124 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.62939e-06 8.55499L14.5 0.204193V17.8168L7.62939e-06 25.4084V8.55499Z" fill="#91A9FF"/>
                 <path d="M28.9241 8.55499L14.4241 0.204193V17.8168L28.9241 25.4084V8.55499Z" fill="#5E81FF"/>
@@ -86,11 +82,13 @@ export default function NavbarClients() {
                 >
                   Home
                 </Link>
+                {Cookies.get("token") &&
                 <Link to={"/dashboard"}
                   className="hover:text-blue-700 px-3 py-2 text-md font-medium"
                 >
                   Dashboard
                 </Link>
+                }
                 <Link to={"/explore-job"}
                   className="hover:text-blue-700 px-3 py-2 text-md font-medium"
                 >
@@ -99,51 +97,84 @@ export default function NavbarClients() {
               </div>
             </div>
           </div>
-          <div className="absolute inset-y-0 right-0 flex items-center gap-2 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            {/* Button Register */}
-            <Link to={"/signup"}>
-              <button className="text-white bg-gray-400 hover:bg-blue-600 rounded px-6 py-2 text-sm font-medium">
-                Register
-              </button>
-            </Link>
-            {/* Button Sign In */}
-            <Link to={"/signin"}>
-              <button className="text-white bg-blue-600 hover:bg-blue-700 rounded px-6 py-2 text-sm font-medium">
-                Sign In
-              </button>
-            </Link>
+          <div className="absolute inset-y-0 right-0 flex items-center gap-2 pr-2 max-[600px]:hidden sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            {!Cookies.get("token") &&
+              <Link to={"/signup"}>
+                <button className="text-white bg-gray-400 hover:bg-blue-600 rounded px-6 py-2 text-sm font-medium">
+                  Register
+                </button>
+              </Link>
+              }
+              {!Cookies.get("token") &&
+              <Link to={"/signin"}>
+                <button className="text-white bg-blue-600 hover:bg-blue-700 rounded px-6 py-2 text-sm font-medium">
+                  Sign In
+                </button>
+              </Link>
+              }
+              {Cookies.get("token") &&
+              <Link to={"/signin"}>
+                <button onClick={() => {Cookies.remove("token"); navigate("/signin")}} className="text-white bg-blue-600 hover:bg-blue-700 rounded px-6 py-2 text-sm font-medium">
+                  Sign Out
+                </button>
+              </Link> 
+              }
           </div>
         </div>
       </div>
       {/* Mobile menu, show/hide based on menu state. */}
-      <div className="sm:hidden" id="mobile-menu">
+      <div className={showMenu ? "hidden sm:hidden" : "sm:hidden"} id="mobile-menu">
         <div className="space-y-1 px-2 pb-3 pt-2">
           {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
+          {Cookies.get("token") &&
           <Link
-            to={"/"}
+            to={"/dashboard"}
             className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
             aria-current="page"
           >
             Dashboard
           </Link>
+          }
           <Link
             to={"/"}
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            className="text-gray-300 hover:bg-blue-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
-            Team
+            Home
           </Link>
           <Link
-            to={"/"}
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            to={"/explore-job"}
+            className="text-gray-300 hover:bg-blue-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
-            Projects
+            Explore Job
           </Link>
+          {!Cookies.get("token") &&
           <Link
-            to={"/"}
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            to={"/signup"}
+            // text-white bg-blue-600 hover:bg-blue-700 rounded px-6 py-2 text-sm font-medium
+            className="text-gray-300 hover:bg-blue-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
-            Calendar
+            Register
           </Link>
+          }
+          {!Cookies.get("token") &&
+          <Link
+            to={"/signin"}
+            // text-white bg-blue-600 hover:bg-blue-700 rounded px-6 py-2 text-sm font-medium
+            className="text-gray-300 hover:bg-blue-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+          >
+            Sign In
+          </Link>
+          }
+          {Cookies.get("token") &&
+          <Link
+            to={"/signin"}
+            onClick={() => {Cookies.remove("token"); navigate("/signin")}}
+            // text-white bg-blue-600 hover:bg-blue-700 rounded px-6 py-2 text-sm font-medium
+            className="text-gray-300 hover:bg-blue-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+          >
+            Sign Out
+          </Link>
+          }
         </div>
       </div>
     </nav>
