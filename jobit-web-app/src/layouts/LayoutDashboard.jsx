@@ -7,7 +7,7 @@ export default function LayoutDashboard() {
   return (
     <>
       <div className="flex">
-        <div className="flex-none w-72">
+        <div className="flex-none w-60">
           <NavigationSideDashboard/>
         </div>
         <div className="grow">

@@ -9,3 +9,13 @@
         </Routes>
       </BrowserRouter>
       <Footer/> */}
+
+      {"id": user.id, "email": user.email, "name": user.name, "image": user.image_url, "created": user.created_at,  "updated": user.updated_at}
+
+
+      json.stringify => VIdeo 22 - menit 01:18:13
+
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis earum impedit porro doloribus vero blanditiis optio assumenda eveniet, possimus totam quis quisquam architecto, cupiditate voluptatum beatae! Officiis temporibus obcaecati voluptatem!
+
+      01.29.00 Minutes on video for reset data search and filter (Video Eps 22)
+      35.00 Minutes on video for set to search and filter data (Video Eps 20)
