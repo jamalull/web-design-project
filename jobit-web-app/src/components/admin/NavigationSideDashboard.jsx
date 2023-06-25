@@ -1,11 +1,13 @@
 import React from 'react'
 import NavbarDashboard from './NavbarDashboard'
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import Cookies from "js-cookie";
 
 export default function NavigationSideDashboard() {
+  let navigate = useNavigate();
   return (
     <>
-      <div className="max-w-xs flex h-screen flex-col justify-between border-e bg-white sticky top-0">
+      <div className="flex h-screen flex-col justify-between border-e bg-white sticky top-0">
         <div className="px-4 py-6">
           <span className="grid h-10 w-32 place-content-center">
           <svg width="124" height="34" viewBox="0 0 124 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,22 +66,7 @@ export default function NavigationSideDashboard() {
                 </ul>
               </details>
             </li>
-            {/* <li>
-              <a
-                href=""
-                className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-blue-100 hover:text-gray-700"
-              >
-                Billing
-              </a>
-            </li>
-            <li>
-              <a
-                href=""
-                className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-blue-100 hover:text-gray-700"
-              >
-                Invoices
-              </a>
-            </li> */}
+            
             <li>
               <details className="group [&_summary::-webkit-details-marker]:hidden">
                 <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-blue-100 hover:text-gray-700">
@@ -117,14 +104,13 @@ export default function NavigationSideDashboard() {
                     </Link>
                   </li>
                   <li>
-                    <form action="/logout">
-                      <button
+                      <Link to={"/"}
+                        onClick={() => {Cookies.remove("token"); navigate("/");}}
                         type="submit"
                         className="w-full rounded-lg px-4 py-2 text-sm font-medium text-gray-500 [text-align:_inherit] hover:bg-blue-100 hover:text-gray-700"
                       >
                         Logout
-                      </button>
-                    </form>
+                      </Link>
                   </li>
                 </ul>
               </details>
@@ -138,13 +124,14 @@ export default function NavigationSideDashboard() {
           >
             <img
               alt="Man"
-              src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              // src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              src={Cookies.get("image")}
               className="h-10 w-10 rounded-full object-cover"
             />
             <div>
               <p className="text-xs">
-                <strong className="block font-medium">Eric Frusciante</strong>
-                <span> eric@frusciante.com </span>
+                <strong className="block font-medium">{Cookies.get("name")}</strong>
+                <span> {Cookies.get("email")} </span>
               </p>
             </div>
           </a>

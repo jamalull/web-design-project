@@ -1,3 +1,4 @@
+import Cookies from "js-cookie"
 import React from 'react'
 
 export default function DetailsProfileUser() {
@@ -7,22 +8,23 @@ export default function DetailsProfileUser() {
         <article className="group">
           <img
             alt="Lava"
-            src="https://images.unsplash.com/photo-1631451095765-2c91616fc9e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+            src={Cookies.get("image")}
             className="h-56 w-1/2 rounded-xl object-cover shadow-xl transition group-hover:grayscale-[50%]"
           />
-          <div className="p-4">
-            <a href="#">
-              <h3 className="text-lg font-medium text-gray-900">
-                Name : Jamalul Ikhsan
-              </h3>
-            </a>
-            <a href="#">
-              <h3 className="text-lg font-medium text-gray-900">
-                Email : jamalulikhsan@gmail.com
-              </h3>
-            </a>
+          <div>
+            <h3 className="text-lg font-medium pt-3 text-gray-900">
+              Account ID : {Cookies.get("id")}
+            </h3>
+
+            <h3 className="text-lg font-medium pt-3 text-gray-900">
+              Name : {Cookies.get("name")}
+            </h3>
+            
+            <h3 className="text-lg font-medium text-gray-900">
+              Email : {Cookies.get("email")}
+            </h3>
             <p className="mt-2 line-clamp-7 text-sm/relaxed text-gray-500">
-              <b className="text-gray-900">My Describe : </b> <br />
+              <b className="text-gray-900">About Me : </b> <br />
               I am a fresh graduate from bachelor of computer science. I am enthusiastic, reliable, 
               responsible and hardworking person.    I  am a team worker and adapt easily to all 
               challenging situations. I am able to work well both in a team and individual environment. 
@@ -30,6 +32,14 @@ export default function DetailsProfileUser() {
               languages such as JavaScript, Python, PHP, and others. Currently I'm looking for job 
               opportunities that can provide opportunities for further development.
             </p>
+
+            <h3 className="text-md font-medium pt-5 text-gray-900">
+              Created Profile Account : {Cookies.get("created")}
+            </h3>
+            <h3 className="text-md font-medium text-gray-900">
+              Updated Profile Account : {Cookies.get("updated")}
+            </h3>
+
           </div>
         </article>
       </div>
