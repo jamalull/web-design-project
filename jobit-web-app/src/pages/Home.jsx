@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import JobList from '../components/clients/JobList'
+import DummyJobList from "../components/clients/DummyJobList"
 
 export default function Home() {
   return (
@@ -21,14 +21,14 @@ export default function Home() {
             </p>
             <div className="mt-8 flex flex-wrap gap-4 text-center">
               <Link
-                to={"/"}
+                to={"/explore-job"}
               > 
                 <button className="block w-full rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-blue-700 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto">
                     Find A Job
                 </button>
               </Link>
               <Link
-                to={"/"}
+                to={"/dashboard"}
               >
                 <button className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-blue-600 shadow hover:text-blue-700 focus:outline-none focus:ring active:text-blue-500 sm:w-auto">
                   Post a Job
@@ -55,12 +55,12 @@ export default function Home() {
                 and discover your future.
                 
               </p>
-              <a
-                href="#"
-                className="mt-8 inline-block rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+              <Link
+                to={"/explore-job"}
+                className="mt-8 inline-block rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-blue-400"
               >
                 Lest's Explore Now
-              </a>
+              </Link>
             </div>
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
               <a
@@ -237,7 +237,7 @@ export default function Home() {
         />
       </section>
       
-      <JobList/>
+      <DummyJobList/>
       
       {/* =========== Section Quote From CEO ============ */}
       <div className="mx-auto mb-32 max-w-5xl px-4 py-8">

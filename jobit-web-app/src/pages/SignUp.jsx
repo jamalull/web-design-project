@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Link } from "react-router-dom"
+import { GlobalContext } from "../context/GlobalContext"
 
 export default function SignUp() {
+  const {state, handleFunction} = useContext(GlobalContext);
+  const {inputSignUp} = state;
+  const {handleInputSignUp, handleSubmitSignUp} = handleFunction;
+
   return (
     <>
       <div className=" mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
@@ -12,13 +18,16 @@ export default function SignUp() {
           </p>
         </div>
 
-        <form action="" className="mx-auto mb-0 mt-8 max-w-md space-y-4">
+        <form onSubmit={handleSubmitSignUp} className="mx-auto mb-0 mt-8 max-w-md space-y-4">
           <div>
             <label htmlFor="name">
               Fullname *
             </label>
             <div className="relative">
               <input
+                onChange={handleInputSignUp}
+                value={inputSignUp.name}
+                name="name"
                 type="text"
                 className="w-full rounded-lg border-2 border-gray-200 p-4 pe-12 text-sm shadow-sm bg-transparent"
                 placeholder="Enter Your Fullname"
@@ -55,6 +64,9 @@ export default function SignUp() {
             </label>
             <div className="relative">
               <input
+                onChange={handleInputSignUp}
+                value={inputSignUp.image_url}
+                name="image_url"
                 type="text"
                 className="w-full rounded-lg border-2 border-gray-200 p-4 pe-12 text-sm shadow-sm bg-transparent"
                 placeholder="Upload Your Photo here"
@@ -80,6 +92,9 @@ export default function SignUp() {
             </label>
             <div className="relative">
               <input
+                onChange={handleInputSignUp}
+                value={inputSignUp.email}
+                name="email"
                 type="email"
                 className="w-full rounded-lg border-2 border-gray-200 p-4 pe-12 text-sm shadow-sm bg-transparent"
                 placeholder="Enter email"
@@ -110,9 +125,13 @@ export default function SignUp() {
             </label>
             <div className="relative">
               <input
+                onChange={handleInputSignUp}
+                value={inputSignUp.password}
+                name="password"
                 type="password"
                 className="w-full rounded-lg border-2 border-gray-200 p-4 pe-12 text-sm shadow-sm bg-transparent"
                 placeholder="Enter password"
+                minlength="8"
                 required
               />
               <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
@@ -152,9 +171,9 @@ export default function SignUp() {
             </button>
             <p className="text-sm text-gray-500">
               Already Have an Account ?
-              <a className="underline" href="">
+              <Link to={"/SignIn"} className="underline" href="">
                 Sign in here
-              </a>
+              </Link>
             </p>
 
         </form>
