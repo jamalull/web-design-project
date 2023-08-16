@@ -20,7 +20,7 @@ export function Card({ id, image, title, text }) {
           <div className="group py-4 px-4 bg-[#181818] rounded-md hover:bg-[#282828] transition-colors cursor-pointer">
             <div className="relative w-full bg-gradient-to-br from-violet-800 to-teal-500/80 rounded-md">
               
-              <img src={image.src} alt={image.alt} className="h-40 rounded-md w-full object-cover" />
+              <img src={image.src} alt={image.alt} className="aspect-square rounded-md w-full object-cover" />
               {id === first_item_id && (
                 <span className="absolute flex h-5 w-5 animate-bounce items-center justify-center inset-0 m-auto z-10">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
