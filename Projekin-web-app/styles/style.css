@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#navbar {
+    padding: 5px;
+    position: fixed;
+    background-color: whitesmoke;
+    width: 100%;
+}
+#navbar li {
+    margin-right: 10px;
+    display: inline;
+}
+#navbar ul {
+    margin: 10px;
+}
+
+#navlink-right {
+    float: right;
+}
+
+#navbar a{
+    color: black;
+    font-size: 25px;
+    font-weight: 400;
+    text-decoration: none;
+    
+}
+
+#logo span {
+    color: palevioletred;
+}
+
+#btn1, #btn2{
+    padding: 18px 40px;
+    background: #ff847c;
+    outline: none;
+    border: 2px solid #ff847c;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px #666666;
+    cursor: pointer; 
+    border-radius: 5%;  
+}
+
+button:hover{
+    opacity: 0.7;
+    
+}
+.content1-leftCol button, .content2-rightCol button{
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+#content1, #content2{
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-image: url(assets/background.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.content1-rightCol{
+    margin-right: 100px;
+    flex-basis: 50%;
+}
+.content1-rightCol img{
+    width: 100%;
+}
+.content1-leftCol{
+    flex-basis: 50%;
+}
+.content1-leftCol-items{
+    margin-left: 100px;
+    max-width: 500px;
+}
+
+
+.content2-leftCol{
+    margin-left: 100px;
+    flex-basis: 50%;
+}
+.content2-leftCol img{
+    width: 100%;
+}
+.content2-rightCol{
+    flex-basis: 50%;
+}
+.content2-rightCol-items {
+    max-width: 500px;
+}
+
+.footer2 {
+    height: 30px;
+    color: white;
+    background-color: #ff847c;
+}
+
+.footer2 h5{
+    padding-top: 5px;
+    text-align: center;
+}
