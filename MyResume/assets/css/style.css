@@ -696,6 +696,14 @@ section {
   right: 15px;
 }
 
+.portfolio .portfolio-wrap .portfolio-links a i {
+  font-size: 18px;
+}
+.portfolio .portfolio-wrap .portfolio-links a span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
