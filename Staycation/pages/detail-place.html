@@ -26,7 +26,7 @@
           <nav aria-label="Global" class="hidden md:block">
             <ul class="flex items-center gap-6 text-lg">
               <li>
-                <a class="text-[var(--dark-blue-primary)] transition hover:text-[var(--blue-primary)]" href="#"> Home
+                <a class="text-[var(--dark-blue-primary)] transition hover:text-[var(--blue-primary)]" href="../index.html"> Home
                 </a>
               </li>
 
@@ -96,14 +96,101 @@
             Design is a plan or specification for the construction of an object or system or for the implementation of an activity or process, or the result of that plan or specification in the form of a prototype, product or process. The national agency for design: enabling Singapore to use design for economic growth and to make lives better.
           </p>
         </div>
-        <div class="right-content w-[487px] border-2 rounded-lg">
+        <div class="right-content w-[487px] border-2 rounded-lg p-16">
+          <p class="text-[var(--dark-blue-primary)] font-semibold text-xl mb-5">Start Booking</p>
+          <p class="text-green-500 font-semibold text-4xl mb-5">$350<span class="text-gray-400 pl-3 font-light">Per night</span></p>
 
+          <p class="text-[var(--dark-blue-primary)] font-medium mb-3">How long you will stay?</p>
+          <div class="bg-[#F5F6F8] mb-5 flex justify-between">
+            <button class="bg-red-700 text-white w-11 h-11 rounded-md text-2xl">-</button>
+            <input class="text-center p-1 bg-transparent" type="number" value="3" name="duration" id="duration">
+            <button class="bg-green-700 text-white w-11 h-11 rounded-md text-2xl">+</button>
+          </div>
+
+          <p class="text-[var(--dark-blue-primary)] font-medium mb-3">Pick a date</p>
+          <div class="bg-[#F5F6F8] flex">
+            <button class="bg-[#152C5B] text-white w-11 h-11 rounded-md text-2xl">
+              <svg width="35" height="35" viewBox="-10 10 35 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="3" width="23" height="23" rx="2" stroke="white" stroke-width="2" />
+                <rect x="5" y="15" width="5" height="5" rx="1" stroke="white" stroke-width="2" />
+                <rect x="15" y="15" width="5" height="5" rx="1" stroke="white" stroke-width="2" />
+                <path d="M1 9H24" stroke="white" stroke-width="2" />
+                <path d="M5 1L5 5" stroke="white" stroke-width="2" stroke-linecap="round" />
+                <path d="M20 1L20 5" stroke="white" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </button>
+            <input class="text-center p-1 bg-transparent w-80" type="date"  name="date" id="date">
+          </div>
+          <p class="mt-3 text-gray-400">You will pay <span class="text-[var(--dark-blue-primary)] font-semibold">$480 USD</span> per <span class="text-[var(--dark-blue-primary)] font-semibold">2 nights</span></p>
+          <button class="block rounded text-center bg-blue-700/95 mt-10 px-28 py-3 text-sm font-medium text-white shadowfocus:outline-none focus:ring active:bg-blue-700 sm:w-auto"
+              > Continue to Book </button>
         </div>
       </section>
+
+      
+      <section class="mt-16">
+        <h1 class="text-[var(--dark-blue-primary)] font-medium text-2xl mb-5">Treasure to Choose</h1>
+        <div class="flex justify-between">
+          <div class="relative">
+            <!-- <p class="absolute right-0 bg-[#FF498B] text-white text-sm w-fit p-2 rounded-bl-2xl rounded-tr-2xl"><span class="font-semibold">Popular</span> Choice</p> -->
+            <img class="w-72 h-44 rounded-2xl" src="https://www.buvagroup.com/wp-content/uploads/2015/12/One-bedroom-pool-villa-exterior-1024x533.jpg" alt="">
+            <h2 class="text-[var(--dark-blue-primary)] font-medium mt-3">Bali House's</h2>
+            <h4 class="text-gray-400">Lombok, Indonesia</h4>
+          </div>
+          <div class="relative">
+            <p class="absolute right-0 bg-[#FF498B] text-white text-sm w-fit p-2 rounded-bl-2xl rounded-tr-2xl"><span class="font-semibold">Popular</span> Choice</p>
+            <img class="w-72 h-44 rounded-2xl" src="https://blog.tiket.com/wp-content/uploads/Villa-Near-Beach-in-Indonesia_Blog-new-update-mei2020-Villa-Biru-Tanjung-Lesung1-min.jpg" alt="">
+            <h2 class="text-[var(--dark-blue-primary)] font-medium mt-3">Tropical Villa's</h2>
+            <h4 class="text-gray-400">Uluwatu Bali, Indonesia</h4>
+          </div>
+          <div class="relative">
+            <!-- <p class="absolute right-0 bg-[#FF498B] text-white text-sm w-fit p-2 rounded-bl-2xl rounded-tr-2xl"><span class="font-semibold">Popular</span> Choice</p> -->
+            <img class="w-72 h-44 rounded-2xl" src="https://assets.cntraveller.in/photos/64b1537c1e94724098a802d6/master/pass/banglore%20hotels%20lead.jpeg" alt="">
+            <h2 class="text-[var(--dark-blue-primary)] font-medium mt-3">Skywalk Hotels</h2>
+            <h4 class="text-gray-400">Abu Dhabi, Dubai</h4>
+          </div>
+          <div class="relative">
+            <!-- <p class="absolute right-0 bg-[#FF498B] text-white text-sm w-fit p-2 rounded-bl-2xl rounded-tr-2xl"><span class="font-semibold">Popular</span> Choice</p> -->
+            <img class="w-72 h-44 rounded-2xl" src="https://media.cntravellerme.com/photos/64b31fe5caaff27b7da29851/3:2/w_8688,h_5792,c_limit/Atlantis%20The%20Royal%20Dubai_cloud22-poolview.jpg" alt="">
+            <h2 class="text-[var(--dark-blue-primary)] font-medium mt-3">Mahmod Hotels</h2>
+            <h4 class="text-gray-400">Abu Dhabi, Dubai</h4>
+          </div>
+        </div>
+      </section>
+      <!-- END OF SECTION I -->
+      
+      <section class="testimonies md:flex gap-16 items-center my-28">
+        <img class="w-96 max-md:mx-auto" src="../assets/img/foto_keluarga2.png" alt="testimonies-img">
+        <div class="right-testimonies max-md:text-center max-md:mt-10">
+          <h1 class="font-medium text-2xl mb-10">Happy Family</h1>
+          <div class="star flex gap-4 my-5 max-md:justify-center">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.0489 3.67705C17.3483 2.75574 18.6517 2.75574 18.9511 3.67705L21.6484 11.9785C21.7822 12.3905 22.1662 12.6695 22.5994 12.6695H31.328C32.2968 12.6695 32.6995 13.9091 31.9158 14.4785L24.8542 19.609C24.5037 19.8637 24.3571 20.315 24.4909 20.7271L27.1882 29.0285C27.4876 29.9498 26.4331 30.7159 25.6494 30.1465L18.5878 25.016C18.2373 24.7613 17.7627 24.7613 17.4122 25.016L10.3506 30.1465C9.56689 30.7159 8.51241 29.9498 8.81176 29.0285L11.5091 20.7271C11.6429 20.315 11.4963 19.8637 11.1458 19.609L4.08417 14.4785C3.30046 13.9091 3.70323 12.6695 4.67196 12.6695H13.4006C13.8338 12.6695 14.2178 12.3905 14.3516 11.9785L17.0489 3.67705Z" fill="#FFCC47"/>
+            </svg>
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.0489 3.67705C17.3483 2.75574 18.6517 2.75574 18.9511 3.67705L21.6484 11.9785C21.7822 12.3905 22.1662 12.6695 22.5994 12.6695H31.328C32.2968 12.6695 32.6995 13.9091 31.9158 14.4785L24.8542 19.609C24.5037 19.8637 24.3571 20.315 24.4909 20.7271L27.1882 29.0285C27.4876 29.9498 26.4331 30.7159 25.6494 30.1465L18.5878 25.016C18.2373 24.7613 17.7627 24.7613 17.4122 25.016L10.3506 30.1465C9.56689 30.7159 8.51241 29.9498 8.81176 29.0285L11.5091 20.7271C11.6429 20.315 11.4963 19.8637 11.1458 19.609L4.08417 14.4785C3.30046 13.9091 3.70323 12.6695 4.67196 12.6695H13.4006C13.8338 12.6695 14.2178 12.3905 14.3516 11.9785L17.0489 3.67705Z" fill="#FFCC47"/>
+            </svg>
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.0489 3.67705C17.3483 2.75574 18.6517 2.75574 18.9511 3.67705L21.6484 11.9785C21.7822 12.3905 22.1662 12.6695 22.5994 12.6695H31.328C32.2968 12.6695 32.6995 13.9091 31.9158 14.4785L24.8542 19.609C24.5037 19.8637 24.3571 20.315 24.4909 20.7271L27.1882 29.0285C27.4876 29.9498 26.4331 30.7159 25.6494 30.1465L18.5878 25.016C18.2373 24.7613 17.7627 24.7613 17.4122 25.016L10.3506 30.1465C9.56689 30.7159 8.51241 29.9498 8.81176 29.0285L11.5091 20.7271C11.6429 20.315 11.4963 19.8637 11.1458 19.609L4.08417 14.4785C3.30046 13.9091 3.70323 12.6695 4.67196 12.6695H13.4006C13.8338 12.6695 14.2178 12.3905 14.3516 11.9785L17.0489 3.67705Z" fill="#FFCC47"/>
+            </svg>
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.0489 3.67705C17.3483 2.75574 18.6517 2.75574 18.9511 3.67705L21.6484 11.9785C21.7822 12.3905 22.1662 12.6695 22.5994 12.6695H31.328C32.2968 12.6695 32.6995 13.9091 31.9158 14.4785L24.8542 19.609C24.5037 19.8637 24.3571 20.315 24.4909 20.7271L27.1882 29.0285C27.4876 29.9498 26.4331 30.7159 25.6494 30.1465L18.5878 25.016C18.2373 24.7613 17.7627 24.7613 17.4122 25.016L10.3506 30.1465C9.56689 30.7159 8.51241 29.9498 8.81176 29.0285L11.5091 20.7271C11.6429 20.315 11.4963 19.8637 11.1458 19.609L4.08417 14.4785C3.30046 13.9091 3.70323 12.6695 4.67196 12.6695H13.4006C13.8338 12.6695 14.2178 12.3905 14.3516 11.9785L17.0489 3.67705Z" fill="#FFCC47"/>
+            </svg>
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.0489 3.67705C17.3483 2.75574 18.6517 2.75574 18.9511 3.67705L21.6484 11.9785C21.7822 12.3905 22.1662 12.6695 22.5994 12.6695H31.328C32.2968 12.6695 32.6995 13.9091 31.9158 14.4785L24.8542 19.609C24.5037 19.8637 24.3571 20.315 24.4909 20.7271L27.1882 29.0285C27.4876 29.9498 26.4331 30.7159 25.6494 30.1465L18.5878 25.016C18.2373 24.7613 17.7627 24.7613 17.4122 25.016L10.3506 30.1465C9.56689 30.7159 8.51241 29.9498 8.81176 29.0285L11.5091 20.7271C11.6429 20.315 11.4963 19.8637 11.1458 19.609L4.08417 14.4785C3.30046 13.9091 3.70323 12.6695 4.67196 12.6695H13.4006C13.8338 12.6695 14.2178 12.3905 14.3516 11.9785L17.0489 3.67705Z" fill="#FFCC47"/>
+            </svg>
+          </div>
+          <h1 class="font-medium text-3xl leading-relaxed max-w-xl max-md:mx-auto mb-5">As a wife I can pick a great trip with
+            my own lovely family ... thank you!</h1>
+          <h1 class="font-medium text-gray-400 text-lg mb-5">Michael, Marketer</h1>
+          <a class="block rounded max-md:mx-auto max-w-[280px] text-center bg-blue-700/95 mt-16 px-12 py-3 text-sm font-medium text-white shadowfocus:outline-none focus:ring active:bg-blue-700 sm:w-auto"
+              href="#"> Read Their Story </a>
+        </div>
+      </section>
+      <!-- END OF SECTION TESTIMONIES -->
+
     </section>
   </main>
-  
-  <div class="h-[20vh]"></div>
 
   <hr>
   <footer class="mt-16 mb-12 md:max-w-screen-2xl md:mx-auto">
