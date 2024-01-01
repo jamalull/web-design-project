@@ -42,8 +42,8 @@
         <p class="text-[var(--dark-blue-primary)] font-semibold text-4xl mb-3">Booking Information</p>
         <p class="text-gray-400 max-w-xs mx-auto">Please fill up the blank fields below</p>
       </div>
-      <div class="content flex my-10 justify-center gap-16">
-        <div>
+      <div class="content flex my-10 justify-center gap-16 max-md:flex-wrap">
+        <div class="max-[390px]:mx-4">
           <img class="rounded-2xl w-96 h-56" src="../assets/img/Blue Origin Fams.png" alt="">
           <span class="flex justify-between mt-4 items-center">
             <h1 class="text-[var(--dark-blue-primary)] font-medium mb-1">Mexicc Studio</h1>
@@ -51,7 +51,7 @@
           </span>
           <p class="text-gray-300 text-sm">Malioboro, Yogyakarta</p>
         </div>
-        <div class="border opacity-50"></div>
+        <div class="border opacity-50 max-md:hidden"></div>
         <div class="flex flex-col">
           <label class="text-sm mb-2" for="firstName">First Name</label>
           <input class="bg-gray-100 rounded-md h-8 p-3 w-72 mb-5" type="text" name="firstName" id="firstName" placeholder="Please type here ...">
